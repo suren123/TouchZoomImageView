@@ -10,7 +10,3 @@ A Simple Touch Zoom ImageView for Android
 	android:layout_height="150dp"
 	android:src="@mipmap/ic_launcher"
 	zoomImageView:zoomNum="1.5"/>
-
-
-
-
