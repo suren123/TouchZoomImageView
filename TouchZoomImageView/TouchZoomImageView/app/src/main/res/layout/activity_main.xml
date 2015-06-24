@@ -7,11 +7,12 @@
 
     <com.suren.touchzoomimageview.view.TouchZoomImageView
         xmlns:zoomImageView="http://schemas.android.com/apk/res/com.suren.touchzoomimageview"
+        android:id="@+id/tziv_test"
         android:layout_centerInParent="true"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_vertical"
-        android:src="@mipmap/ic_launcher"
+        android:src="@mipmap/ic_test"
         zoomImageView:zoomNum="1.5"/>
 
 </RelativeLayout>

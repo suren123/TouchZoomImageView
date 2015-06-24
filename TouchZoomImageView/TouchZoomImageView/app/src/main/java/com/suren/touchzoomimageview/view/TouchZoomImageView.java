@@ -15,10 +15,7 @@ import com.suren.touchzoomimageview.util.AnimUtil;
  */
 public class TouchZoomImageView extends ImageView {
 
-    private int mHeight;
-    private int mWidth;
     private Rect rect;
-
     private float mZoomNum = 1.2f;
 
     public TouchZoomImageView(Context context) {
@@ -29,7 +26,7 @@ public class TouchZoomImageView extends ImageView {
     public TouchZoomImageView(Context context, AttributeSet attrs){
         super(context, attrs);
 
-        //自定义属性
+        //get attrs
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TouchZoomImageView);
         mZoomNum = a.getFloat(R.styleable.TouchZoomImageView_zoomNum, 1.2f);
         a.recycle();
@@ -39,13 +36,6 @@ public class TouchZoomImageView extends ImageView {
 
     private void init(){
         this.setClickable(true);
-        this.post(new Runnable() {
-            @Override
-            public void run() {
-                mHeight = TouchZoomImageView.this.getHeight();
-                mWidth = TouchZoomImageView.this.getWidth();
-            }
-        });
     }
 
     @Override

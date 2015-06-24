@@ -1,16 +1,30 @@
 package com.suren.touchzoomimageview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import com.suren.touchzoomimageview.view.TouchZoomImageView;
 
 public class MainActivity extends AppCompatActivity {
+
+    TouchZoomImageView tziv_test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tziv_test = (TouchZoomImageView) findViewById(R.id.tziv_test);
+        tziv_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
