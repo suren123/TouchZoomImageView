@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TouchZoomImageView">
+        <attr name="zoomNum" format="float"/>
+        <attr name="itemBackground" format="float"/>
+    </declare-styleable>
+</resources>
